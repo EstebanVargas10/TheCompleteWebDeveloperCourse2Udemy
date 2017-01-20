@@ -8,20 +8,28 @@
 </head>
 
 <body>
+    <p> What is the magic word?</p>
+    <p> <input type="text" id="magicWord"> </p>
+    <p> <button id="checkMagicword"> Let me check dude </button> </p>
     <script type="text/javascript">
-        var myArray = new Array();
+        document.getElementById("checkMagicword").onclick = function () {
 
-        myArray[0] = "Pizza";
-        myArray[1] = "Chocolate";
+            var magicWordEntered = document.getElementById("magicWord").value;
 
-        var tweets = ["Morning everybody! :D", "I love pizza"];
-        tweets.push("This is the 3rd");
+            var magicWord = "abracadabra";
 
-        tweets.splice(1, 1, "Desayuno!!! :D ");
+            if (magicWordEntered == magicWord) {
+
+                alert("Welcome Back bro :D. I missed you");
+
+            } else {
+
+                alert("Nope, try again :( ")
+            }
 
 
 
-        console.log(tweets);
+        }
     </script>
 </body>
 
