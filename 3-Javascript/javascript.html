@@ -5,9 +5,32 @@
 </head>
 
 <body>
+    <p id="text">Hello World!</p>
+    <button id="myButton">Change Text</button>
 
-    <button onclick="alert('Que mae mas curioso')">Click? </button>
+    <p id="secondParagraph">Javascript Is</p>
+    <button id="secondButton"> This is the second button </button>
 
+    <p id="emptyParapgraph"> </p>
+    <button id="createParagraph"> Que hara esta vara? </button>
+
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            document.getElementById("text").innerHTML = "New button!";
+        }
+
+        document.getElementById("createParagraph").onclick = function(){
+
+            document.getElementById("emptyParapgraph").innerHTML = "Bueeenas :)"
+
+
+
+
+        }
+
+    
+    </script>
 </body>
 
 </html>
