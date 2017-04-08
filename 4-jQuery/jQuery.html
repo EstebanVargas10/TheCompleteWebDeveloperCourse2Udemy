@@ -4,6 +4,22 @@
     <title>jQuery</title>
 
     <script src="jquery.min.js"></script>
+    <style type="text/css">
+        #circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 10px;
+        }
+        
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
 
 
 
@@ -11,20 +27,28 @@
 
 <body>
 
-    Hi there!
+    <div id="circle"> </div>
+
+    <div class="square"> </div>
+
+    <div class="square"> </div>
+
 
     <script type="text/javascript">
-        if (typeof jQuery == "undefined") {
+        $("div").click(function () {
 
-            alert("jQuery is not installed!")
+                    if ($(this).attr("id") == "circle") {
 
 
+                        alert("u clicked on a circle";
 
-        } else {
+                        } else {
 
-            alert("jQuery is isntalled corerctly!")
+                            alert("u clicked on a Square")
 
-        }
+                        }
+
+                    });
     </script>
 
 </body>
