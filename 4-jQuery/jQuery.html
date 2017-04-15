@@ -2,55 +2,35 @@
 
 <head>
     <title>jQuery</title>
-
-    <script src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <style type="text/css">
         #circle {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             background-color: green;
-            margin: 10px;
-        }
-        
-        .square {
-            width: 150px;
-            height: 150px;
-            background-color: red;
-            margin: 10px;
         }
     </style>
-
-
-
 </head>
 
 <body>
-
-    <div id="circle"> </div>
-
-    <div class="square"> </div>
-
-    <div class="square"> </div>
-
-
+    <div id="circle"></div>
     <script type="text/javascript">
-        $("div").click(function () {
+        $("#circle").click(function () {
 
-                    if ($(this).attr("id") == "circle") {
+            $(this).animate({
+                width: "400px",
+                height: "400px",
+                marginLeft: "100px",
+                marginTop: "100px",
+            }, 1000, function(){
 
+                $(this).css("background-color", "red");
 
-                        alert("u clicked on a circle";
+            });
 
-                        } else {
-
-                            alert("u clicked on a Square")
-
-                        }
-
-                    });
+        })
     </script>
-
 </body>
 
 </html>
